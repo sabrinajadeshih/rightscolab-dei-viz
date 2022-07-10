@@ -1,6 +1,8 @@
 import dash
-import dash_core_components as dcc
-import dash_html_components as html
+from dash import dcc
+#import dash_core_components as dcc
+from dash import html
+#import dash_html_components as html
 import pandas as pd
 
 data = pd.read_csv("avocado.csv")
@@ -8,7 +10,18 @@ data = data.query("type == 'conventional' and region == 'Albany'")
 data["Date"] = pd.to_datetime(data["Date"], format="%Y-%m-%d")
 data.sort_values("Date", inplace=True)
 
-app = dash.Dash(__name__)
+
+external_stylesheets = [
+    {
+        "href": "https://fonts.googleapis.com/css2?"
+        "family=Lato:wght@400;700&display=swap",
+        "rel": "stylesheet",
+    },
+]
+
+#app = dash.Dash(__name__)
+app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 
 app.layout = html.Div(
     children=[
