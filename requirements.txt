@@ -3,3 +3,6 @@ gunicorn
 django-heroku
 dash
 pandas
+networkx
+bokeh
+matplotlib
