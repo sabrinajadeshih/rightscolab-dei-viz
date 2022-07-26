@@ -11,8 +11,8 @@ import math
 
 
 #%%
-tvl_df = pd.read_csv('/Users/sabrinashih/Desktop/dashboard_data/7_12-TVLDEI-Visualizations_DF.csv')
-ps_df = pd.read_csv('/Users/sabrinashih/Desktop/dashboard_data/7_22-ProxyDEI-Visualizations_DF.csv.gz')
+tvl_df = pd.read_csv('/Users/aorawancraprayoon/Desktop/7_12-TVLDEI-Visualizations_DF.csv')
+ps_df = pd.read_csv('/Users/aorawancraprayoon/Desktop/7_22-ProxyDEI-Visualizations_DF.csv.gz')
 
 #%%
 tvl_options = {
